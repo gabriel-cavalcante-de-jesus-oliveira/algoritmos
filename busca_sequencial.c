@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#define TAM_NOME 51
 #define TAM_CURSO 31
 #define QTD_ALUNOS 3
 typedef long TipoChave;
 typedef struct{
-    char nome[TAM_NOME];
+    char nome[8];
     TipoChave matricula;
-    char curso[TAM_CURSO];
+    char curso[8];
     int turma;
 } Aluno;
 Aluno a[QTD_ALUNOS], *ptrAluno = &a[0];
@@ -42,7 +41,7 @@ int main(){
     TipoChave chave;
     preencheRegistros();
     printf("Matrícula do aluno consultado: ");
-    scanf("%ld", &chave); // especificador de formato para "signed long int"
+    scanf("%ld", &chave);
     i_chave = buscaSequencial(chave);
     if(i_chave == -1){
         puts("Aluno não encontrado!");
