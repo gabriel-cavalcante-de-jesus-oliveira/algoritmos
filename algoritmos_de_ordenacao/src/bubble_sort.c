@@ -3,7 +3,7 @@
 typedef unsigned short TipoArranjo;
 TipoArranjo arranjo[] = {1,10,2,9,8,5,7,3,6,4}; // arranjo global desordenado
 void troca(int i, int j) {
-    int aux;
+    TipoArranjo aux;
     // troca usando variável auxiliar
     aux = arranjo[i];
     arranjo[i] = arranjo[j];
@@ -35,7 +35,7 @@ void bubbleSort() {
 void saida() {
     unsigned short i;
     for(i = 0; i < TAM_ARRANJO; i++) {
-        printf("%3d", arranjo[i]); //tamanho de campos
+        printf("%3hu", arranjo[i]); //tamanho de campos
     }
     printf("\n");
 }
