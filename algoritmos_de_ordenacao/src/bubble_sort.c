@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define TAM_ARRANJO 10
-typedef unsigned short TipoArranjo
+typedef unsigned short TipoArranjo;
 TipoArranjo arranjo[] = {1,10,2,9,8,5,7,3,6,4}; // arranjo global desordenado
 void troca(int i, int j) {
     int aux;
@@ -14,15 +14,33 @@ void troca(int i, int j) {
     arranjo[i] -= arranjo[j];*/
 }
 void bubbleSort() {
-    unsigned short aux;
+    signed short i, j;
+    // ordem crescente
+    /*for(i = TAM_ARRANJO - 1; i >= 0; i--) {
+        for(j = TAM_ARRANJO - 1; j >= 0; j--) {
+            if(arranjo[i] > arranjo[j]) {
+                troca(i, j);
+            }
+        }
+    }*/
+    // ordem decrescente
     for(i = TAM_ARRANJO - 1; i >= 0; i--) {
-        for(j = TAM_ARRANJO; j >= 0; j--) {
+        for(j = TAM_ARRANJO - 1; j >= 0; j--) {
             if(arranjo[i] < arranjo[j]) {
                 troca(i, j);
             }
         }
     }
 }
+void saida() {
+    unsigned short i;
+    for(i = 0; i < TAM_ARRANJO; i++) {
+        printf("%3d", arranjo[i]); //tamanho de campos
+    }
+    printf("\n");
+}
 int main() {
+    bubbleSort();
+    saida();
     return 0;
 }
