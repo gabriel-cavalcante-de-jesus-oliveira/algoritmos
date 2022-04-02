@@ -1,1 +1,13 @@
-Em muitas aplicações, é comum a necessidade de haver consultas a um registro ou dado específico, através de uma chave (valor ao qual se quer buscar). Para isso, implementa-se uma função ou método (a depender da linguagem), ao qual busca aquele registro, através de comparações da chave com outros registros, porém há várias maneiras de realizar isso, umas mais eficientes ou mais adequadas a um cenário específico que outras. Neste repositório se encontra dois algoritmos de busca fáceis de implementar, porém muito poderosos, além de mais dois algoritmos de ordenação mais eficientes que o bubble sort.
+# ALGORITMOS DE BUSCA E ORDENAÇÃO
+
+*Neste repositório se encontra algoritmos para busca ou ordenação em memória primária*
+
+**ALGORITMOS DE BUSCA**
+
+. Busca sequencial (Sequential search)
+. Busca binária (Binary search)
+
+**ALGORITMOS DE ORDENAÇÃO**
+
+. Ordenação por inserção (Insertion sort)
+. Ordenação por seleção (Selection sort)
