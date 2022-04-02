@@ -28,7 +28,7 @@ void preencheRegistros(){
     (ptrAluno + 2)->turma = 1713;
 }
 int buscaSequencial(TipoChave chave){
-    int i, i_chave;
+    int i, i_chave = -1;
     for(i = 0; i < QTD_ALUNOS; i++){
         if((ptrAluno + i)->matricula == chave){
             i_chave = i;
@@ -44,10 +44,14 @@ int main(){
     printf("Matrícula do aluno consultado: ");
     scanf("%ld", &chave); // especificador de formato para "signed long int"
     i_chave = buscaSequencial(chave);
-    puts("Aluno consultado");
-    printf("Nome: %s\n", (ptrAluno + i_chave)->nome);
-    printf("Matrícula: %ld\n", (ptrAluno + i_chave)->matricula);
-    printf("Curso: %s\n", (ptrAluno + i_chave)->curso);
-    printf("Turma: %d\n", (ptrAluno + i_chave)->turma);
+    if(i_chave == -1){
+        puts("Aluno não encontrado!");
+    } else{
+        puts("Aluno consultado");
+        printf("Nome: %s\n", (ptrAluno + i_chave)->nome);
+        printf("Matrícula: %ld\n", (ptrAluno + i_chave)->matricula);
+        printf("Curso: %s\n", (ptrAluno + i_chave)->curso);
+        printf("Turma: %d\n", (ptrAluno + i_chave)->turma);
+    }
     return 0;
 }
