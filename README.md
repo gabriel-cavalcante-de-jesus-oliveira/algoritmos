@@ -1,4 +1,4 @@
-# ALGORITMOS DE BUSCA E ORDENAÇÃO
+# ALGORITMOS DE BUSCA OU ORDENAÇÃO
 
 *Neste repositório se encontra algoritmos para busca ou ordenação em memória primária*
 
